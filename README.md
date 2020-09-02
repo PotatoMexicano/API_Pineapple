@@ -1,3 +1,4 @@
+
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
@@ -5,19 +6,41 @@
 [![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
 [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## About "Pineapple API"
 
-## Official Documentation
+Pineapple API é uma API externa do projeto [Pineapple](https://github.com/PotatoMexicano/Web_Pineapple) que foi desenvolvida usando o Lumen, um microframework PHP, pode considera-lo um filho do Laravel.
+O projeto original Pineapple já possui uma API interna, porem não tão completa como esta.
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-## Contributing
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    Login API
+    {
+    "message": "Login OK",
+    "data": {
+    "user": { "name": "admin"}
+    },
+    "token": "TlRsTG5HY3dHbUJQaUJJSTOKENTOKENE45YkVkdmMxMld4ZA=="
+    }
+    
+ - [x] *para qualquer comando é necessario informar o api_token do usuario logado.*
+ - [x] *Mensagem de erro caso api_token invalido*
 
-## Security Vulnerabilities
+Exemplos: 
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+ - Update vehicle, é possivel atualizar qualquer dado a respeito do veiculo
+> /api/cars/1?type=**jeep**&color=**white**
+> 
+ - Listagem, o ID_VEHICLE é opcional, sem este argumento todos os
+   veiculos serão apresentados
+> /api/cars/**{ID_VEHICLE}**
+
+Para acessar o projeto Pineapple:  [**Pineapple**](http://oihi.ddns.net:8181/)
+
+Para utilizar a API: 
+
+> php artisan serve --host={IP} --port={porta}
+
+Para acessar outro projeto:  [**Safewalk**](http://oihi.ddns.net:8585/)
 
 ## License
 
